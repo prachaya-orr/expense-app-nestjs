@@ -54,6 +54,7 @@ export class AppController {
     @Param('id', ParseUUIDPipe) id: string,
     @Body() body: UpdateReportDto,
   ) {
+    console.log(body);
     const reportType =
       type === 'income' ? ReportType.INCOME : ReportType.EXPENSE;
 
