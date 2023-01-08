@@ -12,6 +12,7 @@ import {
 } from '@nestjs/common';
 import { data, ReportType } from './data';
 import { AppService } from './app.service';
+import { CreateReportDto } from './dtos/report.dto';
 
 @Controller('report/:type')
 export class AppController {
@@ -38,7 +39,7 @@ export class AppController {
 
   @Post()
   createReport(
-    @Body() { source, amount }: { source: string; amount: number },
+    @Body() { source, amount }: CreateReportDto,
     @Param('type', new ParseEnumPipe(ReportType)) type: string,
   ) {
     const reportType =
