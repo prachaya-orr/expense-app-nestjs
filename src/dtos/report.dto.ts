@@ -35,7 +35,7 @@ export class ReportResponseDto {
   source: string;
   amount: number;
 
-  @Expose({ name: 'createAt' })
+  @Expose({ name: 'createdAt' })
   tranformCreateAt() {
     return this.created_at;
   }
