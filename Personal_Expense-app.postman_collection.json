@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"source\": \"Amazon FBA\",\n    \"amount\": 2000\n}",
+					"raw": "{\n    \"source\": \"dsfdsfsdf\",\n    \"amount\": 2000\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,6 +61,42 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
+					"raw": "{\n    \"source\": \"Udemy\",\n    \"amount\": 2100,\n    \"gorilla\": \"banana\",\n    \"Lion\":\"Meat \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/report/income/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report",
+						"income",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2ab04fa4-c148-4495-bf1b-b2b4afef62c8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a Report",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
 					"raw": "{\n    \"amount\": 1234\n}",
 					"options": {
 						"raw": {
@@ -83,18 +119,10 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "13349431-5682-4e42-9fa1-a08152438b86"
+							"value": "cca29624-a46c-43db-8367-32dd814d9eba"
 						}
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "delete a Report",
-			"request": {
-				"method": "DELETE",
-				"header": []
 			},
 			"response": []
 		},
@@ -104,7 +132,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/report/expense/uuid3",
+					"raw": "http://localhost:3000/report/income/:id",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -112,8 +140,33 @@
 					"port": "3000",
 					"path": [
 						"report",
-						"expense",
-						"uuid3"
+						"income",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "84d84fd6-116b-466e-970d-3fc40be35eb7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"summary"
 					]
 				}
 			},
