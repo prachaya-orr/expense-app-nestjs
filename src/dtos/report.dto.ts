@@ -33,8 +33,9 @@ export class UpdateReportDto {
 export class ReportResponseDto {
   id: string;
   source: string;
+  amount:number;
   created_at: Date;
-
+ 
   @Exclude()
   updated_at: Date;
   type: ReportType;
